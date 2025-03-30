@@ -130,17 +130,17 @@ nav ul li {
 /* Aquí se establece el posicionamiento */
 nav ul li:nth-child(1) {
     text-align: left; /* Alineado a la izquierda para "CULEBRAS" */
-    padding-left: 60px; /* "Culebras" desplazado un poco hacia el centro */
+    padding-left: 5px; /* "Culebras" desplazado un poco hacia el centro */
 }
 
 nav ul li:nth-child(2) {
     text-align: left; /* Centrado debajo de "CULEBRAS" */
-    padding-left: 60px;/* "Víbora" desplazado un poco hacia el centro */
+    padding-left: 5px;/* "Víbora" desplazado un poco hacia el centro */
 }
 
 nav ul li:nth-child(3) {
     text-align: left; /* Alineado a la izquierda para "CONSTRICTORAS" */
-    padding-left: 60px; /* "Constrictoras" desplazado un poco hacia el centro */
+    padding-left: 5px; /* "Constrictoras" desplazado un poco hacia el centro */
 }
 
 /* Ajustamos la altura de la fila para acercarlo a SERPIENTES */
