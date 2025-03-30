@@ -1,0 +1,161 @@
+/* Fuente con estilo más fuerte */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap');
+
+/* Estilo para el título h1 con textura mejorada */
+header h1 {
+    font-size: 4.5rem;
+    font-family: 'Cinzel', serif;
+    background: url('../img/serpiente_textura.jpg'); /* Imagen de textura */
+    background-size: cover;
+    background-position: center;
+    -webkit-background-clip: text;
+    background-clip: text; /* Asegura la compatibilidad con navegadores no WebKit */
+    -webkit-text-fill-color: transparent;
+
+    /* Contorno negro para mejorar legibilidad */
+    text-shadow: 
+        -3px -3px 2px rgba(0, 0, 0, 0.8), 
+         3px -3px 2px rgba(0, 0, 0, 0.8), 
+        -3px  3px 2px rgba(0, 0, 0, 0.8), 
+         3px  3px 2px rgba(0, 0, 0, 0.8),
+         0px  0px 15px rgba(0, 0, 0, 0.6); /* Glow oscuro */
+}
+
+/* Color gris más oscuro para los enlaces */
+nav ul li a {
+    font-family: 'Cinzel', serif;
+    font-size: 2.25rem;
+    color: #505050; /* Gris oscuro */
+    background: linear-gradient(45deg, #5a5a5a, #3d3d3d, #222222);
+    -webkit-background-clip: text;
+    background-clip: text; /* Asegura la compatibilidad con navegadores no WebKit */
+    -webkit-text-fill-color: transparent; /* Usamos solo esto para evitar el warning */
+    text-decoration: none; /* Eliminar subrayado */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8); /* Más sombra */
+}
+
+/* Fondo con imagen */
+body {
+    background: url('../img/serpiente_fondo.jpg') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Capa encima del fondo para cambiar de color */
+.filtro {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.2);
+    animation: cambiarColor 20s infinite alternate;
+    z-index: -1; /* Se manda al fondo */
+}
+
+/* Animación de cambio de color */
+@keyframes cambiarColor {
+    0% { background-color: rgba(255, 0, 0, 0.3); }
+    25% { background-color: rgba(0, 255, 0, 0.3); }
+    50% { background-color: rgba(0, 0, 255, 0.3); }
+    75% { background-color: rgba(255, 255, 0, 0.3); }
+    100% { background-color: rgba(255, 0, 255, 0.3); }
+}
+
+/* Estilos para el header */
+header {
+    color: black;
+    font-size: 3.75rem;
+    text-align: center;
+}
+
+/* Efecto en el texto principal */
+main {
+    color: white;
+    font-size: 1.8rem;
+    text-align: center;
+    margin-top: 30px;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+}
+
+/* Estilo para el texto de "Presentación hecha por Titipunchin" */
+.footer-text {
+    position: fixed;
+    bottom: 20px; /* Lo fija en la parte inferior */
+    left: 100%; /* Comienza fuera de la pantalla a la derecha */
+    width: max-content;
+    font-size: 1.5rem;
+    color: #bbb;
+    font-family: 'Cinzel', serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    white-space: nowrap; /* Evita que el texto se corte o salte de línea */
+    
+    /* Animación más lenta */
+    animation: moverTexto 30s linear infinite;
+}
+
+/* Definimos la animación */
+@keyframes moverTexto {
+    0% { left: 100%; } /* Inicia fuera de la pantalla a la derecha */
+    100% { left: -50%; } /* Se mueve completamente a la izquierda */
+}
+
+/* Contenedor del menú */
+nav {
+    display: flex;
+    justify-content: center; /* Centra los elementos horizontalmente */
+    width: 80%; /* Define el ancho del contenedor, puedes ajustarlo */
+    margin: 0 auto; /* Centra el contenedor en la página */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    width: 100%; /* Toma todo el ancho del contenedor */
+    text-align: center; /* Centra el contenido de los elementos */
+    margin-top: -30px; /* Baja las palabras más cerca del título */
+}
+
+/* Distribución escalonada de los elementos en 3 líneas */
+nav ul li {
+    display: block; /* Cambia a block para que cada palabra esté en su propia línea */
+    margin: 0; /* Elimina márgenes extras */
+    padding: 10px 0; /* Espaciado entre las líneas */
+}
+
+/* Aquí se establece el posicionamiento */
+nav ul li:nth-child(1) {
+    text-align: left; /* Alineado a la izquierda para "CULEBRAS" */
+    padding-left: 60px; /* "Culebras" desplazado un poco hacia el centro */
+}
+
+nav ul li:nth-child(2) {
+    text-align: left; /* Centrado debajo de "CULEBRAS" */
+    padding-left: 60px;/* "Víbora" desplazado un poco hacia el centro */
+}
+
+nav ul li:nth-child(3) {
+    text-align: left; /* Alineado a la izquierda para "CONSTRICTORAS" */
+    padding-left: 60px; /* "Constrictoras" desplazado un poco hacia el centro */
+}
+
+/* Ajustamos la altura de la fila para acercarlo a SERPIENTES */
+nav ul li:nth-child(2), nav ul li:nth-child(3) {
+    margin-top: -10px; /* Mueve "Víbora" y "Constrictora" un poco hacia arriba para alinearlos mejor */
+}
+
+nav ul li a {
+    font-size: 2rem;
+    color: #505050; /* Gris oscuro */
+    text-decoration: none; /* Eliminar subrayado */
+}
+
+/* Efecto hover en los enlaces */
+nav ul li a:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+}
