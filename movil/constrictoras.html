@@ -11,11 +11,11 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 0; /* Eliminar espacio adicional */
+            padding: 0;
             text-align: center;
             position: relative;
             width: 100%;
-            margin-top: 0; /* Subir el encabezado */
+            margin-top: 0;
         }
 
         /* Estilo de ATRÁS e INICIO */
@@ -32,11 +32,11 @@
         }
 
         .back-link {
-            left: 20px; /* A la izquierda */
+            left: 20px;
         }
 
         .inicio-link {
-            right: 20px; /* A la derecha */
+            right: 20px;
         }
 
         /* Ajustar posición del título CONSTRICTORAS */
@@ -44,8 +44,9 @@
             font-size: 3.5rem;
             text-align: center;
             font-weight: bold;
-            padding-top: 60px; /* Ajuste para que no se superpongan con ATRÁS e INICIO */
+            padding-top: 60px;
             margin-bottom: 0;
+            color: black;  /* Color negro fuerte para la palabra CONSTRICTORAS */
         }
 
         /* Ajuste de la barra de navegación */
@@ -53,7 +54,7 @@
             list-style: none;
             padding: 0;
             text-align: center;
-            margin-top: 0; /* Reducir espacio entre las serpientes y el título */
+            margin-top: 0;
         }
 
         nav ul li {
@@ -78,8 +79,8 @@
             color: #b0b0b0;
             padding: 20px;
             border-radius: 15px;
-            width: 90%; /* Ajuste para no irse de la pantalla */
-            max-width: 900px; /* Ajustado el ancho máximo */
+            width: 90%;
+            max-width: 900px;
             max-height: 55vh;
             text-align: justify;
             border: 2px double #aaa;
@@ -88,7 +89,7 @@
             font-size: 1.2rem;
             overflow-y: auto;
             margin-left: auto;
-            margin-right: auto; /* Centrado horizontalmente */
+            margin-right: auto;
         }
 
         /* Evitar scroll en toda la página */
@@ -108,7 +109,7 @@
 
             header h1 {
                 font-size: 2.5rem;
-                padding-top: 10px; /* Ajustado para que esté cerca de la parte superior */
+                padding-top: 10px;
             }
 
             nav ul li a {
@@ -116,10 +117,10 @@
             }
 
             .info-box {
-                width: 90%; /* Ajuste para mantener márgenes en móvil */
+                width: 90%;
                 max-width: 90%;
                 font-size: 1rem;
-                margin-left: 5%; /* Añadir márgenes para la pantalla móvil */
+                margin-left: 5%; /* Márgenes laterales en móviles */
                 margin-right: 5%;
                 padding: 10px;
             }
@@ -135,19 +136,24 @@
                 width: 95%;
                 max-width: 95%;
                 font-size: 0.9rem;
-                margin-left: 5%; /* Asegura que haya margen también en pantallas más pequeñas */
+                margin-left: 5%;
                 margin-right: 5%;
                 padding: 10px;
             }
 
             nav ul li {
                 display: inline-block;
-                margin: 10px 5px; /* Ajuste para que quepan las serpientes en una línea */
+                margin: 10px 5px;
             }
 
             nav ul li a {
                 font-size: 1.3rem;
             }
+        }
+
+        /* Mejora de visibilidad de los nombres de las serpientes */
+        nav ul li a {
+            color: black; /* Cambiar a negro para mejor contraste */
         }
     </style>
 </head>
@@ -155,9 +161,9 @@
     <div class="filtro"></div>
     <header>
         <!-- Enlaces ATRÁS e INICIO -->
-        <a href="javascript:history.back()" class="back-link">ATRÁS</a> <!-- ATRÁS a la izquierda -->
-        <a href="index.html" class="inicio-link">INICIO</a> <!-- INICIO a la derecha -->
-        <h1>CONSTRICTORAS</h1>
+        <a href="javascript:history.back()" class="back-link">ATRÁS</a>
+        <a href="index.html" class="inicio-link">INICIO</a>
+        <h1>C O N S T R I C T O R A S</h1>
     </header>
     <nav>
         <ul>
