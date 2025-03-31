@@ -11,10 +11,11 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 20px;
+            padding: 0; /* Eliminar espacio adicional */
             text-align: center;
             position: relative;
             width: 100%;
+            margin-top: 0; /* Subir el encabezado */
         }
 
         /* Estilo de ATRÁS e INICIO */
@@ -24,8 +25,8 @@
             color: black;
             text-decoration: none;
             font-weight: bold;
-            position: absolute;
-            top: 20px;
+            position: fixed;
+            top: 0;
             padding: 10px 20px;
             z-index: 10;
         }
@@ -38,18 +39,13 @@
             right: 20px; /* A la derecha */
         }
 
-        /* Ajustar la posición de INICIO para que tenga la misma separación que ATRÁS */
-        .inicio-link {
-            right: 20px; /* Ahora tiene la misma separación que ATRÁS */
-        }
-
         /* Ajustar posición del título CONSTRICTORAS */
         header h1 {
             font-size: 3.5rem;
-            margin-top: 0;
             text-align: center;
             font-weight: bold;
-            padding-top: 20px;
+            padding-top: 60px; /* Ajuste para que no se superpongan con ATRÁS e INICIO */
+            margin-bottom: 0;
         }
 
         /* Ajuste de la barra de navegación */
@@ -57,12 +53,12 @@
             list-style: none;
             padding: 0;
             text-align: center;
-            margin-top: 10px; /* Subido más cerca de CONSTRICTORAS */
+            margin-top: 0; /* Reducir espacio entre las serpientes y el título */
         }
 
         nav ul li {
             display: inline-block;
-            margin: 0 15px;
+            margin: 0 10px;
         }
 
         nav ul li a {
@@ -88,7 +84,7 @@
             text-align: justify;
             border: 2px double #aaa;
             position: relative;
-            margin-top: 20px; /* Ajustar la distancia superior */
+            margin-top: 20px;
             font-size: 1.2rem;
             overflow-y: auto;
             margin-left: auto;
@@ -107,11 +103,12 @@
             .back-link,
             .inicio-link {
                 font-size: 1.2rem;
+                padding: 5px 15px;
             }
 
             header h1 {
                 font-size: 2.5rem;
-                padding-top: 10px; /* Alineado más estrecho */
+                padding-top: 10px; /* Ajustado para que esté cerca de la parte superior */
             }
 
             nav ul li a {
@@ -137,8 +134,8 @@
             }
 
             nav ul li {
-                display: block;
-                margin: 10px 0;
+                display: inline-block;
+                margin: 10px 5px; /* Ajuste para que quepan las serpientes en una línea */
             }
 
             nav ul li a {
