@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constrictoras</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Ajuste del encabezado */
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        /* Estilo de INICIO sin la imagen de sangre */
+        .inicio-link {
+            font-size: 1.5rem;
+            color: black; /* Texto en negro */
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 20px;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            display: inline-block;
+            z-index: 10;
+        }
+
+        /* Ajustar posición del título */
+        header h1 {
+            font-size: 3.5rem;
+            margin-top: 40px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        /* Ajustar la barra de navegación */
+        nav ul {
+            position: fixed;
+            top: 50%;
+            left: 20px;
+            transform: translateY(-50%);
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 30px 0;
+        }
+
+        nav ul li a {
+            font-size: 2rem;
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: #b20000;
+        }
+
+        /* Ajustar el recuadro de texto */
+        .info-box {
+            background-color: rgba(50, 50, 50, 0.9);
+            color: #b0b0b0;
+            padding: 20px;
+            border-radius: 15px;
+            width: 85%; /* Ajuste para no irse de la pantalla */
+            max-width: 900px; /* Ajustado el ancho máximo */
+            max-height: 55vh;
+            text-align: justify;
+            border: 2px double #aaa;
+            position: fixed;
+            top: 55%;
+            left: 55%; /* Aseguramos que no se salga de la pantalla */
+            transform: translate(-50%, -50%);
+            overflow-y: auto; /* Permitir scroll solo dentro del recuadro */
+            font-size: 1.2rem; /* Ajuste en el tamaño de la letra */
+        }
+
+        /* Evitar scroll en toda la página */
+        body {
+            height: 100vh;
+            overflow: hidden;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="filtro"></div>
+    <header>
+        <a href="index.html" class="inicio-link">INICIO</a>
+        <h1>CONSTRICTORAS</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="piton.html">Pitón</a></li>
+            <li><a href="anaconda.html">Anaconda</a></li>
+            <li><a href="boa.html">Boa</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="info-box">
+            <p>Las serpientes constrictoras son reptiles que matan a sus presas por asfixia, enrollándose alrededor de ellas y apretando hasta que dejan de respirar.</p>
+            <p>Se encuentran en distintos hábitats, desde selvas tropicales hasta zonas áridas y pantanos. Son comunes en América, África, Asia y Australia.</p>
+            <p>A diferencia de las serpientes venenosas, las constrictoras dependen de su fuerza muscular para inmovilizar a sus presas. Se alimentan de mamíferos, aves y ocasionalmente reptiles.</p>
+            <p>En cuanto a la reproducción, suelen poner huevos (ovíparas) aunque algunas especies, como la boa, son vivíparas y dan a luz crías vivas.</p>
+            <p>Curiosidad: La anaconda verde es la serpiente más pesada del mundo y puede superar los 200 kg.</p>
+        </div>
+    </main>
+
+</body>
+</html>
