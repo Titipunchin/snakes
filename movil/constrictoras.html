@@ -14,46 +14,59 @@
             padding: 20px;
             text-align: center;
             position: relative;
+            width: 100%;
         }
 
-        /* Estilo de INICIO sin la imagen de sangre */
+        /* Estilo de ATRÁS e INICIO */
+        .back-link,
         .inicio-link {
             font-size: 1.5rem;
-            color: black; /* Texto en negro */
+            color: black;
             text-decoration: none;
             font-weight: bold;
-            padding: 10px 20px;
             position: absolute;
             top: 20px;
-            left: 20px;
-            display: inline-block;
+            padding: 10px 20px;
             z-index: 10;
         }
 
-        /* Ajustar posición del título */
-        header h1 {
-            font-size: 3.5rem;
-            margin-top: 40px;
-            text-align: center;
-            font-weight: bold;
+        .back-link {
+            left: 20px; /* A la izquierda */
         }
 
-        /* Ajustar la barra de navegación */
+        .inicio-link {
+            right: 20px; /* A la derecha */
+        }
+
+        /* Ajustar la posición de INICIO para que tenga la misma separación que ATRÁS */
+        .inicio-link {
+            right: 20px; /* Ahora tiene la misma separación que ATRÁS */
+        }
+
+        /* Ajustar posición del título CONSTRICTORAS */
+        header h1 {
+            font-size: 3.5rem;
+            margin-top: 0;
+            text-align: center;
+            font-weight: bold;
+            padding-top: 20px;
+        }
+
+        /* Ajuste de la barra de navegación */
         nav ul {
-            position: fixed;
-            top: 50%;
-            left: 20px;
-            transform: translateY(-50%);
             list-style: none;
             padding: 0;
+            text-align: center;
+            margin-top: 10px; /* Subido más cerca de CONSTRICTORAS */
         }
 
         nav ul li {
-            margin: 30px 0;
+            display: inline-block;
+            margin: 0 15px;
         }
 
         nav ul li a {
-            font-size: 2rem;
+            font-size: 1.8rem;
             color: #333;
             text-decoration: none;
             font-weight: bold;
@@ -63,23 +76,23 @@
             color: #b20000;
         }
 
-        /* Ajustar el recuadro de texto */
+        /* Ajuste del recuadro de texto */
         .info-box {
             background-color: rgba(50, 50, 50, 0.9);
             color: #b0b0b0;
             padding: 20px;
             border-radius: 15px;
-            width: 85%; /* Ajuste para no irse de la pantalla */
+            width: 90%; /* Ajuste para no irse de la pantalla */
             max-width: 900px; /* Ajustado el ancho máximo */
             max-height: 55vh;
             text-align: justify;
             border: 2px double #aaa;
-            position: fixed;
-            top: 55%;
-            left: 55%; /* Aseguramos que no se salga de la pantalla */
-            transform: translate(-50%, -50%);
-            overflow-y: auto; /* Permitir scroll solo dentro del recuadro */
-            font-size: 1.2rem; /* Ajuste en el tamaño de la letra */
+            position: relative;
+            margin-top: 20px; /* Ajustar la distancia superior */
+            font-size: 1.2rem;
+            overflow-y: auto;
+            margin-left: auto;
+            margin-right: auto; /* Centrado horizontalmente */
         }
 
         /* Evitar scroll en toda la página */
@@ -88,12 +101,58 @@
             overflow: hidden;
             margin: 0;
         }
+
+        /* Estilos responsivos para pantallas más pequeñas */
+        @media screen and (max-width: 768px) {
+            .back-link,
+            .inicio-link {
+                font-size: 1.2rem;
+            }
+
+            header h1 {
+                font-size: 2.5rem;
+                padding-top: 10px; /* Alineado más estrecho */
+            }
+
+            nav ul li a {
+                font-size: 1.5rem;
+            }
+
+            .info-box {
+                width: 95%;
+                max-width: 95%;
+                font-size: 1rem;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            header h1 {
+                font-size: 2rem;
+                padding-top: 10px;
+            }
+
+            .info-box {
+                width: 100%;
+                font-size: 0.9rem;
+            }
+
+            nav ul li {
+                display: block;
+                margin: 10px 0;
+            }
+
+            nav ul li a {
+                font-size: 1.3rem;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="filtro"></div>
     <header>
-        <a href="index.html" class="inicio-link">INICIO</a>
+        <!-- Enlaces ATRÁS e INICIO -->
+        <a href="javascript:history.back()" class="back-link">ATRÁS</a> <!-- ATRÁS a la izquierda -->
+        <a href="index.html" class="inicio-link">INICIO</a> <!-- INICIO a la derecha -->
         <h1>CONSTRICTORAS</h1>
     </header>
     <nav>
@@ -112,6 +171,5 @@
             <p>Curiosidad: La anaconda verde es la serpiente más pesada del mundo y puede superar los 200 kg.</p>
         </div>
     </main>
-
 </body>
 </html>
