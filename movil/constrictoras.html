@@ -6,6 +6,9 @@
     <title>Constrictoras</title>
     <link rel="stylesheet" href="css/style.css">
     <style>
+        /* Importar la fuente de 'Cinzel' si la estás usando */
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap');
+
         /* Ajuste del encabezado */
         header {
             display: flex;
@@ -46,7 +49,8 @@
             font-weight: bold;
             padding-top: 60px;
             margin-bottom: 0;
-            color: black;  /* Color negro fuerte para la palabra CONSTRICTORAS */
+            color: black;  /* Color negro fuerte */
+            font-family: 'Cinzel', serif; /* Aplicamos la misma fuente */
         }
 
         /* Ajuste de la barra de navegación */
@@ -117,11 +121,11 @@
             }
 
             .info-box {
-                width: 90%;
-                max-width: 90%;
+                width: 80%;  /* Reducir el ancho en móvil */
+                max-width: 80%;  /* Asegurando que no se estire demasiado */
                 font-size: 1rem;
-                margin-left: 5%; /* Márgenes laterales en móviles */
-                margin-right: 5%;
+                margin-left: 10%; /* Márgenes laterales en móviles */
+                margin-right: 10%;
                 padding: 10px;
             }
         }
@@ -133,10 +137,10 @@
             }
 
             .info-box {
-                width: 95%;
-                max-width: 95%;
+                width: 90%;  /* Hacerlo un poco más estrecho */
+                max-width: 90%;  /* Reducir al 90% del ancho de la pantalla */
                 font-size: 0.9rem;
-                margin-left: 5%;
+                margin-left: 5%;  /* Márgenes laterales en móviles */
                 margin-right: 5%;
                 padding: 10px;
             }
@@ -163,7 +167,7 @@
         <!-- Enlaces ATRÁS e INICIO -->
         <a href="javascript:history.back()" class="back-link">ATRÁS</a>
         <a href="index.html" class="inicio-link">INICIO</a>
-        <h1>C O N S T R I C T O R A S</h1>
+        <h1>CONSTRICTORAS</h1>
     </header>
     <nav>
         <ul>
